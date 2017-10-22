@@ -199,3 +199,44 @@ The -g option includes debugging info into the out file.
 
 
 
+Eric Instructions, do C++
+=====
+
+These commands are good for ~/.vimrc
+
+The -g option includes debugging info into the out file.
+
+      ":nnoremap <leader>stc !g++ -g main.cpp<cr><cr>:VBGstartGDB <cr>
+      :nnoremap <leader>stc :!g++ -g -o a.out main.cpp<cr>:VBGstartGDB a.out<cr>
+
+
+      "Toggle a breakpoint for the current line
+      :nnoremap <leader>b :VBGtoggleBreakpointThisLine<cr>
+      "Continue the execution and don't stop uless you see breakpoints.
+      :nnoremap <leader>c :VBGcontinue<cr>
+      "Evaluate word under cursor.  WOW!
+      :nnoremap <leader>e :VBGevalWordUnderCursor<cr>
+      "Evaluate and print the expression supplied as argument.
+      :nnoremap <leader>E :VBGeval
+      "execute this line in normal mode
+      :nnoremap <leader>x :VBGexecute<cr>
+      "execute this line in normal mode
+      :nnoremap <leader>X :VBGeval<cr>
+      "toggle terminal buffer
+      :nnoremap <leader>t :VBGtoggleTerminalBuffer<cr>
+      "Continue the execution, stopping at the next statement.
+      :nnoremap <leader>o :VBGstepOver<cr>
+      "Continue the execution until the end of the current function
+      :nnoremap <leader>O :VBGstepOut<cr>
+      "Same as VBGstepOver but stepps into functions.                                                                                
+      :nnoremap <leader>i :VBGstepIn<cr>
+      "Clear all breakpoints.
+      :nnoremap <leader>B :VBGclearBreakpoints<cr>
+
+      ":VBGkill Terminates the debugger
+      :nnoremap <leader>k :VBGkill<cr>
+
+      "Select mode only, raw write selected text
+      :nnoremap <leader>r :VBGrawWriteSelectedText<cr>
+      "Prompt for an argument for VBGrawWrite
+      :nnoremap <leader>R :VBGrawWrite<cr>
