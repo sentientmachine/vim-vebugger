@@ -95,41 +95,41 @@ Eric Instructions, do python
 
 These commands are good for ~/.vimrc
 
-   let mapleader=","
-   "comma stp stands for start, these will need to be custom made for each kind of file.
-   "There are parameters for python2 or python3
-   :nnoremap <leader>stp :VBGstartPDB %<cr>
+      let mapleader=","
+      "comma stp stands for start, these will need to be custom made for each kind of file.
+      "There are parameters for python2 or python3
+      :nnoremap <leader>stp :VBGstartPDB %<cr>
 
-   "Toggle a breakpoint for the current line
-   :nnoremap <leader>b :VBGtoggleBreakpointThisLine<cr>
-   "Continue the execution and don't stop uless you see breakpoints.
-   :nnoremap <leader>c :VBGcontinue<cr>
-   "Evaluate word under cursor.  WOW!
-   :nnoremap <leader>e :VBGevalWordUnderCursor<cr>
-   "Evaluate and print the expression supplied as argument.
-   :nnoremap <leader>E :VBGeval
-   "execute this line in normal mode
-   :nnoremap <leader>x :VBGexecute<cr>
-   "execute this line in normal mode
-   :nnoremap <leader>X :VBGeval<cr>
-   "toggle terminal buffer
-   :nnoremap <leader>t :VBGtoggleTerminalBuffer<cr>
-   "Continue the execution, stopping at the next statement.
-   :nnoremap <leader>o :VBGstepOver<cr>
-   "Continue the execution until the end of the current function
-   :nnoremap <leader>O :VBGstepOut<cr>
-   "Same as VBGstepOver but stepps into functions.
-   :nnoremap <leader>i :VBGstepIn<cr>
-   "Clear all breakpoints.
-   :nnoremap <leader>B :VBGclearBreakpoints<cr>
+      "Toggle a breakpoint for the current line
+      :nnoremap <leader>b :VBGtoggleBreakpointThisLine<cr>
+      "Continue the execution and don't stop uless you see breakpoints.
+      :nnoremap <leader>c :VBGcontinue<cr>
+      "Evaluate word under cursor.  WOW!
+      :nnoremap <leader>e :VBGevalWordUnderCursor<cr>
+      "Evaluate and print the expression supplied as argument.
+      :nnoremap <leader>E :VBGeval
+      "execute this line in normal mode
+      :nnoremap <leader>x :VBGexecute<cr>
+      "execute this line in normal mode
+      :nnoremap <leader>X :VBGeval<cr>
+      "toggle terminal buffer
+      :nnoremap <leader>t :VBGtoggleTerminalBuffer<cr>
+      "Continue the execution, stopping at the next statement.
+      :nnoremap <leader>o :VBGstepOver<cr>
+      "Continue the execution until the end of the current function
+      :nnoremap <leader>O :VBGstepOut<cr>
+      "Same as VBGstepOver but stepps into functions.
+      :nnoremap <leader>i :VBGstepIn<cr>
+      "Clear all breakpoints.
+      :nnoremap <leader>B :VBGclearBreakpoints<cr>
 
-   ":VBGkill Terminates the debugger
-   :nnoremap <leader>k :VBGkill<cr>
+      ":VBGkill Terminates the debugger
+      :nnoremap <leader>k :VBGkill<cr>
 
-   "Select mode only, raw write selected text
-   :nnoremap <leader>r :VBGrawWriteSelectedText<cr>
-   "Prompt for an argument for VBGrawWrite
-   :nnoremap <leader>R :VBGrawWrite<cr>
+      "Select mode only, raw write selected text
+      :nnoremap <leader>r :VBGrawWriteSelectedText<cr>
+      "Prompt for an argument for VBGrawWrite
+      :nnoremap <leader>R :VBGrawWrite<cr>
 
 1.  Make a python file something.py
 2.  Assign some variables and print some lines
@@ -149,40 +149,40 @@ These commands are good for ~/.vimrc
 
 The -g option includes debugging info into the out file.
 
-   let mapleader=","
-   "comma stj stands for start, these will need to be custom made for each kind of file.
-   :nnoremap <leader>stj :!javac -g Main.java<cr><cr>:call vebugger#jdb#start('Main',{'classpath':'.', 'srcpath':'.', 'args':['hello','world']})<cr>
+      let mapleader=","
+      "comma stj stands for start, these will need to be custom made for each kind of file.
+      :nnoremap <leader>stj :!javac -g Main.java<cr><cr>:call vebugger#jdb#start('Main',{'classpath':'.', 'srcpath':'.', 'args':['hello','world']})<cr>
 
-   "Toggle a breakpoint for the current line
-   :nnoremap <leader>b :VBGtoggleBreakpointThisLine<cr>
-   "Continue the execution and don't stop uless you see breakpoints.
-   :nnoremap <leader>c :VBGcontinue<cr>
-   "Evaluate word under cursor.  WOW!
-   :nnoremap <leader>e :VBGevalWordUnderCursor<cr>
-   "Evaluate and print the expression supplied as argument.
-   :nnoremap <leader>E :VBGeval
-   "execute this line in normal mode
-   :nnoremap <leader>x :VBGexecute<cr>
-   "execute this line in normal mode
-   :nnoremap <leader>X :VBGeval<cr>
-   "toggle terminal buffer
-   :nnoremap <leader>t :VBGtoggleTerminalBuffer<cr>
-   "Continue the execution, stopping at the next statement.
-   :nnoremap <leader>o :VBGstepOver<cr>
-   "Continue the execution until the end of the current function
-   :nnoremap <leader>O :VBGstepOut<cr>
-   "Same as VBGstepOver but stepps into functions.
-   :nnoremap <leader>i :VBGstepIn<cr>
-   "Clear all breakpoints.
-   :nnoremap <leader>B :VBGclearBreakpoints<cr>
+      "Toggle a breakpoint for the current line
+      :nnoremap <leader>b :VBGtoggleBreakpointThisLine<cr>
+      "Continue the execution and don't stop uless you see breakpoints.
+      :nnoremap <leader>c :VBGcontinue<cr>
+      "Evaluate word under cursor.  WOW!
+      :nnoremap <leader>e :VBGevalWordUnderCursor<cr>
+      "Evaluate and print the expression supplied as argument.
+      :nnoremap <leader>E :VBGeval
+      "execute this line in normal mode
+      :nnoremap <leader>x :VBGexecute<cr>
+      "execute this line in normal mode
+      :nnoremap <leader>X :VBGeval<cr>
+      "toggle terminal buffer
+      :nnoremap <leader>t :VBGtoggleTerminalBuffer<cr>
+      "Continue the execution, stopping at the next statement.
+      :nnoremap <leader>o :VBGstepOver<cr>
+      "Continue the execution until the end of the current function
+      :nnoremap <leader>O :VBGstepOut<cr>
+      "Same as VBGstepOver but stepps into functions.
+      :nnoremap <leader>i :VBGstepIn<cr>
+      "Clear all breakpoints.
+      :nnoremap <leader>B :VBGclearBreakpoints<cr>
 
-   ":VBGkill Terminates the debugger
-   :nnoremap <leader>k :VBGkill<cr>
+      ":VBGkill Terminates the debugger
+      :nnoremap <leader>k :VBGkill<cr>
 
-   "Select mode only, raw write selected text
-   :nnoremap <leader>r :VBGrawWriteSelectedText<cr>
-   "Prompt for an argument for VBGrawWrite
-   :nnoremap <leader>R :VBGrawWrite<cr>
+      "Select mode only, raw write selected text
+      :nnoremap <leader>r :VBGrawWriteSelectedText<cr>
+      "Prompt for an argument for VBGrawWrite
+      :nnoremap <leader>R :VBGrawWrite<cr>
 
 1.  Make a java file Main.java
 2.  Assign some variables and print some lines
