@@ -71,7 +71,7 @@ Run `help vebugger-usage` from Vim to learn how to operate the debugger.
 
 
 
-Eric Instructions
+Eric Instructions, Install
 =====
 
 1.  git clone the project into /home/el/bin/
@@ -87,3 +87,114 @@ Eric Instructions
 11.  type :VBGcontinue
 12.  :VBGeval myvariablename
 13.  woah
+
+
+
+Eric Instructions, do python
+=====
+
+These commands are good for ~/.vimrc
+
+   let mapleader=","
+   "comma stp stands for start, these will need to be custom made for each kind of file.
+   "There are parameters for python2 or python3
+   :nnoremap <leader>stp :VBGstartPDB %<cr>
+
+   "Toggle a breakpoint for the current line
+   :nnoremap <leader>b :VBGtoggleBreakpointThisLine<cr>
+   "Continue the execution and don't stop uless you see breakpoints.
+   :nnoremap <leader>c :VBGcontinue<cr>
+   "Evaluate word under cursor.  WOW!
+   :nnoremap <leader>e :VBGevalWordUnderCursor<cr>
+   "Evaluate and print the expression supplied as argument.
+   :nnoremap <leader>E :VBGeval
+   "execute this line in normal mode
+   :nnoremap <leader>x :VBGexecute<cr>
+   "execute this line in normal mode
+   :nnoremap <leader>X :VBGeval<cr>
+   "toggle terminal buffer
+   :nnoremap <leader>t :VBGtoggleTerminalBuffer<cr>
+   "Continue the execution, stopping at the next statement.
+   :nnoremap <leader>o :VBGstepOver<cr>
+   "Continue the execution until the end of the current function
+   :nnoremap <leader>O :VBGstepOut<cr>
+   "Same as VBGstepOver but stepps into functions.
+   :nnoremap <leader>i :VBGstepIn<cr>
+   "Clear all breakpoints.
+   :nnoremap <leader>B :VBGclearBreakpoints<cr>
+
+   ":VBGkill Terminates the debugger
+   :nnoremap <leader>k :VBGkill<cr>
+
+   "Select mode only, raw write selected text
+   :nnoremap <leader>r :VBGrawWriteSelectedText<cr>
+   "Prompt for an argument for VBGrawWrite
+   :nnoremap <leader>R :VBGrawWrite<cr>
+
+1.  Make a python file something.py
+2.  Assign some variables and print some lines
+3.  press ,stp  to start debugging
+4.  press ,b  over a line to make a breakpoint
+5.  Press ,c  to continue
+6.  Press ,e to in spect a variable under the cursor
+7.  Press ,k to kill debugging session
+
+
+
+
+Eric Instructions, do Java
+=====
+
+These commands are good for ~/.vimrc
+
+The -g option includes debugging info into the out file.
+   let mapleader=","
+   "comma stj stands for start, these will need to be custom made for each kind of file.
+   :nnoremap <leader>stj :!javac -g Main.java<cr><cr>:call vebugger#jdb#start('Main',{'classpath':'.', 'srcpath':'.', 'args':['hello','world']})<cr>
+
+   "Toggle a breakpoint for the current line
+   :nnoremap <leader>b :VBGtoggleBreakpointThisLine<cr>
+   "Continue the execution and don't stop uless you see breakpoints.
+   :nnoremap <leader>c :VBGcontinue<cr>
+   "Evaluate word under cursor.  WOW!
+   :nnoremap <leader>e :VBGevalWordUnderCursor<cr>
+   "Evaluate and print the expression supplied as argument.
+   :nnoremap <leader>E :VBGeval
+   "execute this line in normal mode
+   :nnoremap <leader>x :VBGexecute<cr>
+   "execute this line in normal mode
+   :nnoremap <leader>X :VBGeval<cr>
+   "toggle terminal buffer
+   :nnoremap <leader>t :VBGtoggleTerminalBuffer<cr>
+   "Continue the execution, stopping at the next statement.
+   :nnoremap <leader>o :VBGstepOver<cr>
+   "Continue the execution until the end of the current function
+   :nnoremap <leader>O :VBGstepOut<cr>
+   "Same as VBGstepOver but stepps into functions.
+   :nnoremap <leader>i :VBGstepIn<cr>
+   "Clear all breakpoints.
+   :nnoremap <leader>B :VBGclearBreakpoints<cr>
+
+   ":VBGkill Terminates the debugger
+   :nnoremap <leader>k :VBGkill<cr>
+
+   "Select mode only, raw write selected text
+   :nnoremap <leader>r :VBGrawWriteSelectedText<cr>
+   "Prompt for an argument for VBGrawWrite
+   :nnoremap <leader>R :VBGrawWrite<cr>
+
+1.  Make a java file Main.java
+2.  Assign some variables and print some lines
+3.  press ,stj  to compile the .class file and start debugging
+3a.  There's some complexity here, the compile and run is a two step command here:
+
+    :!javac -g Main.java<cr><cr>:call vebugger#jdb#start('Main',{'classpath':'.', 'srcpath':'.', 'args':['hello','world']})<cr>
+ 
+4.  press ,b  over a line to make a breakpoint
+5.  Press ,c  to continue
+6.  Press ,e to in spect a variable under the cursor
+7.  Press ,k to kill debugging session
+
+
+
+
