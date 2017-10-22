@@ -68,3 +68,22 @@ USAGE
 Run `help vebugger-launching` from Vim to learn how to launch the debugger.
 
 Run `help vebugger-usage` from Vim to learn how to operate the debugger.
+
+
+
+Eric Instructions
+=====
+
+1.  git clone the project into /home/el/bin/
+2.  Good news we already have vimproc installed in ~/.vimrc
+3.  Check it out, make sure everything in there is kosher
+4.  move it to vim plugins: mv vim-vebugger /home/el/.vim/bundle/
+5.  Add this line to ~/.vimrc Plugin 'idanarye/vim-vebugger'
+6.  Install plugins: vim +PluginInstall +qall
+7.  In vim, run `:help vebugger-launching`  read that.
+8.  Start a vim instance on a program.
+9.  :VBGstartPDB %
+10.  Move to a different line :VBGtoggleBreakpointThisLine
+11.  type :VBGcontinue
+12.  :VBGeval myvariablename
+13.  woah
