@@ -133,6 +133,7 @@ These commands are good for ~/.vimrc
 
 1.  Make a python file something.py
 2.  Assign some variables and print some lines
+2a.  include import pdb at the top of something.py
 3.  press ,stp  to start debugging
 4.  press ,b  over a line to make a breakpoint
 5.  Press ,c  to continue
