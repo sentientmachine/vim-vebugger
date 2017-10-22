@@ -148,6 +148,7 @@ Eric Instructions, do Java
 These commands are good for ~/.vimrc
 
 The -g option includes debugging info into the out file.
+
    let mapleader=","
    "comma stj stands for start, these will need to be custom made for each kind of file.
    :nnoremap <leader>stj :!javac -g Main.java<cr><cr>:call vebugger#jdb#start('Main',{'classpath':'.', 'srcpath':'.', 'args':['hello','world']})<cr>
